@@ -1,1 +1,55 @@
-<p>category-form works!</p>
+<nav>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+        <li class="breadcrumb-item"><a routerLink="/categories"></a>Categorias</li>
+        <li class="breadcrumb-item active">Formulário de Categorias</li>
+    </ol>
+</nav>
+
+<div class="row mb-4">
+    <div class="col-md">
+        <h1 class="h2 border-left pl-2">
+            Formulário de Categorias {{currentAction}}
+        </h1>
+    </div>
+    <div class="cold-md">
+        <a routerLink="/categories" class="btn btn-dark float-right mr-3" id="btnNovo" >
+            Voltar
+        </a>
+    </div>
+</div>
+
+
+<form [formGroup]="categoryForm">
+
+    <div class="card">
+        <div class="card-header">
+            Informações sobre categoria
+        </div>
+
+        <div class="card-body">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="name">Nome</label>
+                    <input type="text" class="form-control" id="name" formControlName="name">
+                </div>
+
+                <div class="text-danger">
+                <!-- <div class="text-danger" *ngIf="categoryForm.get('name').invalid && categoryForm.get('name').touched"> -->
+                    <!-- <div *ngIf="form.get('name').errors.required">Dado Obrigatório</div>
+                    <div *ngIf="form.get('name').errors.minlenght">Dado Obrigatório</div> -->
+                </div>
+
+                <div class="form-group col-md-8">
+                    <label for="description">Descrição</label>
+                    <input type="text" class="form-control" id="description" formControlName="description">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-lg float-right mt-3">
+        Salvar
+    </button>
+
+</form>
