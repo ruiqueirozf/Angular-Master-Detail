@@ -19,7 +19,6 @@
     </div>
 </div>
 
-
 <form [formGroup]="categoryForm" (submit)="submitForm()">
 
     <div class="card">
@@ -45,10 +44,22 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <button [disabled]="submittingForm || categoryForm.invalid" type="submit" class="btn btn-primary btn-lg float-right mt-3">
-        Salvar
-    </button>
+        <div class="offset-md-9 col-md-3">
+            <button [disabled]="submittingForm || categoryForm.invalid" type="submit" class="btn btn-primary btn-lg float-right mt-1 mb-2">
+                Salvar
+            </button>
+
+        </div>
+    </div>
+    
 
 </form>
+
+<div class="alert alert-danger mt-3" *ngIf="serverErrorMessages">
+    <strong>
+        <ul *ngFor="let error of serverErrorMessages">
+            <li>{{error}}</li>
+        </ul>
+    </strong>
+</div>
