@@ -51,12 +51,14 @@
               "../finansys/node_modules/toastr/build/toastr.min.css",
               "../finansys/node_modules/primeicons/primeicons.css",
               "../finansys/node_modules/primeng/resources/themes/nova-light/theme.css",
-              "../finansys/node_modules/primeng/resources/primeng.min.css"
+              "../finansys/node_modules/primeng/resources/primeng.min.css",
+              "../finansys/node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [
               "../finansys/node_modules/jquery/dist/jquery.min.js",
               "../finansys/node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "../finansys/node_modules/chart.js/dist/Chart.bundle.js"
+              "../finansys/node_modules/chart.js/dist/Chart.bundle.js",  
+              "../finansys/node_modules/toastr/build/toastr.min.js"
             ]
           },
           "configurations": {
