@@ -27,4 +27,14 @@ export class CategoryFormComponent extends BaseResourceFormComponent<Category> {
       });
     }
 
+    protected creationPageTitle(): string {
+      return "Cadastro de Novas Categoria";
+    }
+
+    protected editionPageTitle(): string {
+      const categoryName = this.resource.name || "";
+
+      return "Editando categoria: " + categoryName;
+    }
+
 }

@@ -15,15 +15,12 @@ export class EntryListComponent implements OnInit {
   constructor(private entryService: EntryService) { }
 
   ngOnInit() {
-    this.getAllEntries();
-  }
-
-  getAllEntries() {
     this.entryService.getAll().subscribe(
       entries => this.entries = entries.sort((a, b) => b.id - a.id),
       error => alert('Erro ao carregar a lista')
     );
   }
+
 
   deleteEntry(entry) {
     const mustDelete = confirm('Deseja realmente excluir o item?');
