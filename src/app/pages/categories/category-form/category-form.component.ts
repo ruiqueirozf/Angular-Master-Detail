@@ -5,6 +5,7 @@ import { BaseResourceFormComponent } from '../../../shared/components/base-resou
 import { Category } from '../shared/category.model';
 import { CategoryService } from '../shared/category.service';
 import { ToastrService } from 'ngx-toastr';
+import { BreadCrumbComponent } from '../../../shared/components/bread-crumb/bread-crumb.component';
 
 @Component({
   selector: 'app-category-form',
