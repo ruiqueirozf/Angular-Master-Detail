@@ -123,12 +123,6 @@
 
 </form>
 
-<div class="alert alert-danger mt-3" *ngIf="serverErrorMessages">
-    <strong>
-        <ul *ngFor="let error of serverErrorMessages">
-            <li>{{error}}</li>
-        </ul>
-    </strong>
-</div>
+<app-server-error-messages [server-error-messages]="serverErrorMessages"></app-server-error-messages>
 
 <p>{{resourceForm.value | json}}</p>
