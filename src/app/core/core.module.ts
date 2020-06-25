@@ -3,11 +3,14 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDatabase } from '../in-memory-database';
 
 import { CalendarModule } from 'primeng/calendar';
+import { NavbarComponent } from './components/navbar/navbar.component';
+
 
 @NgModule({
   imports: [
@@ -16,6 +19,7 @@ import { CalendarModule } from 'primeng/calendar';
     BrowserAnimationsModule,
     HttpClientModule,
     CalendarModule,
+    RouterModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDatabase)
   ],
   exports: [
@@ -23,8 +27,11 @@ import { CalendarModule } from 'primeng/calendar';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    CalendarModule
+    CalendarModule,
+
+    //shared components
+    NavbarComponent
   ],
-  declarations: [],
+  declarations: [NavbarComponent],
 })
 export class CoreModule { }
