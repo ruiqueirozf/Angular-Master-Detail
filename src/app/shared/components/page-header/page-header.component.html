@@ -4,7 +4,7 @@
             {{pageTitle}}
         </h1>
     </div>
-    <div class="cold-md text-right mr-3">
+    <div *ngIf="showButton" class="cold-md text-right mr-3">
         <a [routerLink]="buttonLink" class="btn" id="btnNovo" [ngClass]="buttonClass">
             {{buttonText}}
         </a>
